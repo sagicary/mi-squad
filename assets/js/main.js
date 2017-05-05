@@ -1,4 +1,5 @@
-function Squad(nombre, apellido, edad, hobby1, hobby2, hobby3){
+function Squad(id,nombre, apellido, edad, hobby1, hobby2, hobby3){
+	this.id = id;
 	this.nombre = nombre;
 	this.apellido = apellido;
 	this.edad = edad;
@@ -11,14 +12,14 @@ function Squad(nombre, apellido, edad, hobby1, hobby2, hobby3){
 	};
 }
 
-var maca = new Squad("Maca","Baltra",20, "Encuadernar","Hacer galletas","Codear");
-var nico = new Squad("Nico","Aliste",20,"Alicia", "Criminalistica","Codear");
-var dani = new Squad("Dani","Medina",20, "Bailar","Gatos", "Codear");
-var andrea = new Squad("Andrea","Rata",20, "Ratas", "Animales", "Codear");
-var fran = new Squad("Fran","Ruiz-Tagle",20,"Dibujar","Gatos","Codear");
-var su = new Squad("Su","Arce",20,"Marketing","Codear","Pegarle a la gente");
-var bere = new Squad("Bere","Nice",20,"Cocinar","Ser vegetariana", "Codear");
-var clau = new Squad("Clau","Rivera", 20, "Bailar","Leer","Codear");
+var maca = new Squad(1,"Maca","Baltra",20, "Encuadernar","Hacer galletas","Codear");
+var nico = new Squad(2,"Nico","Aliste",20,"Alicia", "Criminalistica","Codear");
+var dani = new Squad(3,"Dani","Medina",20, "Bailar","Gatos", "Codear");
+var andrea = new Squad(4,"Andrea","Rata",20, "Ratas", "Animales", "Codear");
+var fran = new Squad(5,"Fran","Ruiz-Tagle",20,"Dibujar","Gatos","Codear");
+var su = new Squad(6,"Su","Arce",20,"Marketing","Codear","Pegarle a la gente");
+var bere = new Squad(7,"Bere","Nice",20,"Cocinar","Ser vegetariana", "Codear");
+var clau = new Squad(8,"Clau","Rivera", 20, "Bailar","Leer","Codear");
 
 var arr = [maca, nico, dani, andrea, fran, su, bere, clau];
 //console.log (arr);
