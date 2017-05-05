@@ -20,6 +20,13 @@ var su = new Squad("Su","Arce",20,"Marketing","Codear","Pegarle a la gente");
 var bere = new Squad("Bere","Nice",20,"Cocinar","Ser vegetariana", "Codear");
 var clau = new Squad("Clau","Rivera", 20, "Bailar","Leer","Codear");
 
+var arr = [maca, nico, dani, andrea, fran, su, bere, clau];
+console.log (arr);
+
+arr.forEach(function(ele){
+	console.log (ele.mostrar());
+});
+
 var uno = document.getElementById('1');
 uno.innerHTML = maca.mostrar();
 
