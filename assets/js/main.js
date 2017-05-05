@@ -21,33 +21,16 @@ var bere = new Squad("Bere","Nice",20,"Cocinar","Ser vegetariana", "Codear");
 var clau = new Squad("Clau","Rivera", 20, "Bailar","Leer","Codear");
 
 var arr = [maca, nico, dani, andrea, fran, su, bere, clau];
-console.log (arr);
+//console.log (arr);
 
+var num=1;
 arr.forEach(function(ele){
-	console.log (ele.mostrar());
+	var aux = document.getElementById(num); 
+	//console.log(aux);
+	num++;
+	//console.log(arr.length+1);
+	//console.log ("Pasó por aquí");
+	aux.innerHTML = ele.mostrar();
+	//console.log("Pasó por el segundo lugar");
+	//console.log (ele.mostrar());
 });
-
-var uno = document.getElementById('1');
-uno.innerHTML = maca.mostrar();
-
-var dos = document.getElementById('2');
-dos.innerHTML = nico.mostrar();
-
-var tres = document.getElementById('3');
-tres.innerHTML = dani.mostrar();
-
-var cuatro = document.getElementById('4');
-cuatro.innerHTML = andrea.mostrar();
-
-var cinco = document.getElementById('5');
-cinco.innerHTML = fran.mostrar();
-
-var seis = document.getElementById('6');
-seis.innerHTML = su.mostrar();
-
-var siete = document.getElementById('7');
-siete.innerHTML = bere.mostrar();
-
-var ocho = document.getElementById('8');
-ocho.innerHTML = clau.mostrar();
-
