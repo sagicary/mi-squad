@@ -40,25 +40,34 @@ function Comentar(id,comentario,like){
 }
 
 function agregar(idUser){
-var nume=1;
 //arr.forEach(function(elem){
     var input = document.getElementById('comen'+idUser).value;
 console.log (input);
     var contTarea = document.getElementById("listar"+idUser);
     console.log (contTarea);
 
-    contTarea.innerHTML += "<li>"+input+"</li>";
-    console.log (input.value);
-
+    contTarea.innerHTML += "<li>"+input+" <button id='like"+idUser+"' onclick='like("+idUser+")'>♥</button></li>";
+   
     //res.push({
      //   'title': input,
    // });
 
   //resul.push(input); 
      input = "";
-    nume++;
-//});
+ //});
 
+}
+
+function like(numero){
+	var input = document.getElementById('like'+numero).value;
+	var mostrar = document.getElementById('like'+numero);
+	//var num = 0;
+
+	var sum = "";
+	mostrar.innerHTML += ((sum+1).length);
+	console.log (sum);
+	console.log ("paso por aqui");
+	
 }
 
 
