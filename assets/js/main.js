@@ -28,8 +28,9 @@ var arr = [maca, nico, dani, andrea, fran, su, bere, clau];
 var num=1;
 arr.forEach(function(ele){
 	var aux = document.getElementById("muestra"); 
-	aux.innerHTML += "<div id='"+num+"'>"+ele.mostrar()+"</div><textarea id='comen"+num+"' rows='4' cols='50' placeholder='Escribe tu comentario'></textarea><button onclick='agregar()'>Enviar comentario</button><p><div id='listar"+num+"'></div>";
+	aux.innerHTML += "<div id='"+num+"'>"+ele.mostrar()+"</div><textarea id='comen"+num+"' rows='4' cols='50' placeholder='Escribe tu comentario'></textarea><br><button onclick='agregar("+ele.id+")'>Enviar comentario</button><p><div id='listar"+num+"'></div>";
 	num++;
+
 });
 
 function Comentar(id,comentario,like){
@@ -38,25 +39,25 @@ function Comentar(id,comentario,like){
 	this.like = like;
 }
 
-function agregar(){
+function agregar(idUser){
 var nume=1;
-arr.forEach(function(elem){
-
-    var input = document.getElementById('comen'+nume).value;
+//arr.forEach(function(elem){
+    var input = document.getElementById('comen'+idUser).value;
 console.log (input);
-    var contTarea = document.getElementById("listar"+nume);
+    var contTarea = document.getElementById("listar"+idUser);
     console.log (contTarea);
 
     contTarea.innerHTML += "<li>"+input+"</li>";
     console.log (input.value);
-   //res.push({
+
+    //res.push({
      //   'title': input,
    // });
 
   //resul.push(input); 
-    input.value = "";
+     input = "";
     nume++;
-});
+//});
 
 }
 
