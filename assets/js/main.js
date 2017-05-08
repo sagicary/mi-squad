@@ -28,11 +28,37 @@ var arr = [maca, nico, dani, andrea, fran, su, bere, clau];
 var num=1;
 arr.forEach(function(ele){
 	var aux = document.getElementById("muestra"); 
-	//console.log(aux);
-	//console.log(arr.length+1);
-	//console.log ("Pasó por aquí");
-	aux.innerHTML += "<div id='"+num+"'>"+ele.mostrar()+"</div>";
+	aux.innerHTML += "<div id='"+num+"'>"+ele.mostrar()+"</div><textarea id='comen"+num+"' rows='4' cols='50' placeholder='Escribe tu comentario'></textarea><button onclick='agregar()'>Enviar comentario</button><p><div id='listar"+num+"'></div>";
 	num++;
-	//console.log("Pasó por el segundo lugar");
-	//console.log (ele.mostrar());
 });
+
+function Comentar(id,comentario,like){
+	this.id = id;
+	this.comentario = comentario;
+	this.like = like;
+}
+
+function agregar(){
+var nume=1;
+arr.forEach(function(elem){
+
+    var input = document.getElementById('comen'+nume).value;
+console.log (input);
+    var contTarea = document.getElementById("listar"+nume);
+    console.log (contTarea);
+
+    contTarea.innerHTML += "<li>"+input+"</li>";
+    console.log (input.value);
+   //res.push({
+     //   'title': input,
+   // });
+
+  //resul.push(input); 
+    input.value = "";
+    nume++;
+});
+
+}
+
+
+
